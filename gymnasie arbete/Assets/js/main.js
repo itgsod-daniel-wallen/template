@@ -71,20 +71,7 @@
 					});
 
 			// Initialize scrollzer.
-				var ids = [];
 
-				$nav_a.each(function() {
-
-					var href = $(this).attr('href');
-
-					if (href[0] != '#')
-						return;
-
-					ids.push(href.substring(1));
-
-				});
-
-				$.scrollzer(ids, { pad: 200, lastHack: true });
 
 		// Header (narrower + mobile).
 
