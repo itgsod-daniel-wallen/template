@@ -4,10 +4,8 @@
 		<title>Little Helper</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/css/grid"
 	</head>
 	<body>
 
@@ -28,21 +26,12 @@
 						<nav id="nav">
 							<!--
 
-
-								1. Hash link (scrolls to a different section within the page)
-
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
-
-								2. Standard link (sends the user to another page/site)
-
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-
 							-->
 							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home blueiconcolor">Intro</span></a></li>
-								<li><a href="#prototype" id="prototype-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Prototypes</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Us</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact Us</span></a></li>
+								<li><a href="#top" id="top-link widget1" class="skel-layers-ignoreHref"><span class="icon fa-home blueiconcolor">Intro</span></a></li>
+								<li><a href="#prototype" id="prototype-link widget2" class="skel-layers-ignoreHref"><span class="icon fa-th">Prototypes</span></a></li>
+								<li><a href="#about" id="about-link widget3" class="skel-layers-ignoreHref"><span class="icon fa-user">About Us</span></a></li>
+								<li><a href="#contact" id="contact-link widget4" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact Us</span></a></li>
 							</ul>
 						</nav>
 
@@ -98,7 +87,7 @@
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="#" class="image fit"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="images/pic03.jpg" alt="" /></a>
 										<header>
 											<h3>sweg</h3>
 										</header>
@@ -145,7 +134,7 @@
 								<h2>About Us</h2>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/coolt.jpg" alt="" /></a>
 
 							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
 							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
@@ -199,12 +188,7 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/scrolly.js"></script>
 			<script src="assets/js/main.js"></script>
 	</body>
 </html>

@@ -1,8 +1,4 @@
-/*
-	Prologue by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 (function($) {
 
@@ -26,81 +22,32 @@
 				$body.removeClass('is-loading');
 			});
 
-		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
+		// Hovering effect on images
+	function bigImg(x) {
+		 x.style.height = "32px";
+		 x.style.width = "32px";
+	}
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+	function normalImg(x) {
+		x.style.height = "64px";
+		x.style.width = "64px";
+	}
 
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
+	// Scrolling smoothly
 
-		// Scrolly links.
-			$('.scrolly').scrolly();
+	$(function() {
+  $('a[href*="prototype"]:not([href="#prototype"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
-		// Nav.
-			var $nav_a = $('#nav a');
-
-			// Scrolly-fy links.
-				$nav_a
-					.scrolly()
-					.on('click', function(e) {
-
-						var t = $(this),
-							href = t.attr('href');
-
-						if (href[0] != '#')
-							return;
-
-						e.preventDefault();
-
-						// Clear active and lock scrollzer until scrolling has stopped
-							$nav_a
-								.removeClass('active')
-								.addClass('scrollzer-locked');
-
-						// Set this link to active
-							t.addClass('active');
-
-					});
-
-			// Initialize scrollzer.
-
-
-		// Header (narrower + mobile).
-
-			// Toggle.
-				$(
-					'<div id="headerToggle">' +
-						'<a href="#header" class="toggle"></a>' +
-					'</div>'
-				)
-					.appendTo($body);
-
-			// Header.
-				$('#header')
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'left',
-						target: $body,
-						visibleClass: 'header-visible'
-					});
-
-			// Fix: Remove transitions on WP<10 (poor/buggy performance).
-				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#headerToggle, #header, #main')
-						.css('transition', 'none');
-
-	});
-
-})(jQuery);
+	
